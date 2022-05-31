@@ -1,44 +1,81 @@
-# Repository for Complementarity-Driven Deferral to Clinicians (CoDoC)
+# Complementarity-driven Deferral to Clinicians
 
-This repository includes the source code for the paper "Enhancing the reliability and accuracy of AI-enabled diagnosis via complementarity-driven deferral to clinicians (CoDoC)" by Dvijotham et al. (2023), published in the journal _Nature Medicine_. The contents of the repository can be used to replicate the experiments provided in the paper, as well as to utilize the CoDoC framework in independent human-AI complementarity research.
+This repository contains an implementation of the Complementarity-driven
+Deferral to Clinicians (CoDoC) algorithms for learning to decide when to rely
+on a diagnostic AI model and when to defer to a human clinician.
 
 ## Installation
 
-The following command sets up python virtual environment and installs all the
-dependencies. This uses `virtualenv` python module
-to create virtual environment. If it doesn not exist, please install it with
-`pip`.
+1. Clone the CoDoC repository:
 
    ```bash
-   bash install.sh
+   git clone https://github.com/deepmind/codoc.git
    ```
 
-## Running
+1. Recommended: set up a virtual Python environment:
 
    ```bash
-   bash run.sh
+   python3 -m venv codoc_env
+   source codoc/bin/activate
+   ```
+   (To leave the virtual environment, type `deactivate`.)
+
+1. Install the dependencies:
+
+   ```bash
+   pip3 install -r codoc/requirements.txt
    ```
 
-The above script should open a notebook server from which `codoc_experiments.ipynb`
-can be run. The notebook has further instructions and documentation to guide
-through running the experimentation pipeline.
+## Usage
 
-## Quickstart
+The following command trains and evaluates a deferral model on Optimam data
+(first reader) using the DP algorithm:
 
-For both purposes mentioned above, we recommend starting from the Jupyter notebook file `Replicating_CoDoC_Experiment_Results.ipynb`. This file walks the user through various functionalities of the implementation provided, familiarizes them with the data format adopted, and if desired provides more specific instructions for the exact replication of existing results.
+_To be run from the parent directory that contains the codoc repository as a
+sub-directory._
 
-Please refer to the original paper for a detailed introduction to the CoDoC framework, its clinical and statistical properties, and experimental results on a variety of datasets.
+```bash
+python3 -m codoc.examples.train --config=codoc/examples/config.py
+```
 
-## Datasets
+This will train a deferral model on the configured "tune" dataset A, and
+evaluate it on both "tune" and "validation" datasets. A successful run will log
+the following metrics for each:
 
-The UK Mammography Dataset (AI scores, clinical predictions, ground truth) will be made available on this page soon, based on a click to accept licensing agreement.
+| Metric             | Description                                            |
+| ------------------ | ------------------------------------------------------ |
+| count              | number of examples                                     |
+| num_case_pos       | number of positive examples according to ground truth  |
+| num_case_neg       | number of negative examples according to ground truth  |
+| withholding_ratio  | proportion of examples for which the deferral model selects to abstain (defer to human) |
+| sens               | sensitivity of the prediction model                    |
+| spec               | specificity of the prediction model                    |
+| min_composite_sens | sensitivity of the model with selective human deferral |
+| min_composite_spec | specificity of the model with selective human deferral |
 
-The US Mammography Dataset 2 can be obtained for research purposes by contacting Prof. Krzysztof J Geras (k.j.geras@nyu.edu).
+## Citing this work
 
-Other datasets featured in the paper are not available as they belong to third party institutions and were used under a licensing agreement specific to this study that does not permit further sharing.
+If you use this code in your work, we ask that you cite this paper:
 
-The data format instructions provided in the aforementioned notebook also allows the user to utilize this implementation with their own custom dataset.
+TODO
 
-## Contact
+## License and disclaimer
 
-For any questions regarding this repository or the paper, please contact Krishnamurthy (Dj) Dvijotham (dvij@cs.washington.edu) and Jim Winkens (jimwinkens@google.com).
+Copyright 2022 DeepMind Technologies Limited
+
+All software is licensed under the Apache License, Version 2.0 (Apache 2.0); you
+may not use this file except in compliance with the Apache 2.0 license. You may
+obtain a copy of the Apache 2.0 license at:
+https://www.apache.org/licenses/LICENSE-2.0
+
+All other materials are licensed under the Creative Commons Attribution 4.0
+International License (CC-BY). You may obtain a copy of the CC-BY license at:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Unless required by applicable law or agreed to in writing, all software and
+materials distributed here under the Apache 2.0 or CC-BY licenses are
+distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied. See the licenses for the specific language governing
+permissions and limitations under those licenses.
+
+This is not an official Google product.
