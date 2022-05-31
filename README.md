@@ -1,43 +1,44 @@
-# codoc
+# Repository for Complementarity-Driven Deferral to Clinicians (CoDoC)
 
-TODO(b/227712267): Add a description for your new project, explain what is
-being released here, etc... Additional, the following sections are normally
-expected for all releases. Feel free to add additional sections if appropriate
-for your project.
+This repository includes the source code for the paper "Enhancing the reliability and accuracy of AI-enabled diagnosis via complementarity-driven deferral to clinicians (CoDoC)" by Dvijotham et al. (2023), published in the journal _Nature Medicine_. The contents of the repository can be used to replicate the experiments provided in the paper, as well as to utilize the CoDoC framework in independent human-AI complementarity research.
 
 ## Installation
 
-Write instructions for how the user should install your code. The instructions
-should ideally be valid when copy-pasted. You can combine this with the Usage
-section if there's no separate installation step.
+The following command sets up python virtual environment and installs all the
+dependencies. This uses `virtualenv` python module
+to create virtual environment. If it doesn not exist, please install it with
+`pip`.
 
-## Usage
+   ```bash
+   bash install.sh
+   ```
 
-Write example usage of your code. The instructions should ideally be valid when
-copy-pasted, and will be used by your technical reviewer to verify that your
-package functions correctly.
+## Running
 
-## Citing this work
+   ```bash
+   bash run.sh
+   ```
 
-Add citation details here, usually a pastable BibTeX snippet.
+The above script should open a notebook server from which `codoc_experiments.ipynb`
+can be run. The notebook has further instructions and documentation to guide
+through running the experimentation pipeline.
 
-## License and disclaimer
+## Quickstart
 
-Copyright 2022 DeepMind Technologies Limited
+For both purposes mentioned above, we recommend starting from the Jupyter notebook file `Replicating_CoDoC_Experiment_Results.ipynb`. This file walks the user through various functionalities of the implementation provided, familiarizes them with the data format adopted, and if desired provides more specific instructions for the exact replication of existing results.
 
-All software is licensed under the Apache License, Version 2.0 (Apache 2.0);
-you may not use this file except in compliance with the Apache 2.0 license.
-You may obtain a copy of the Apache 2.0 license at:
-https://www.apache.org/licenses/LICENSE-2.0
+Please refer to the original paper for a detailed introduction to the CoDoC framework, its clinical and statistical properties, and experimental results on a variety of datasets.
 
-All other materials are licensed under the Creative Commons Attribution 4.0
-International License (CC-BY). You may obtain a copy of the CC-BY license at:
-https://creativecommons.org/licenses/by/4.0/legalcode
+## Datasets
 
-Unless required by applicable law or agreed to in writing, all software and
-materials distributed here under the Apache 2.0 or CC-BY licenses are
-distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-either express or implied. See the licenses for the specific language governing
-permissions and limitations under those licenses.
+The UK Mammography Dataset (AI scores, clinical predictions, ground truth) will be made available on this page soon, based on a click to accept licensing agreement.
 
-This is not an official Google product.
+The US Mammography Dataset 2 can be obtained for research purposes by contacting Prof. Krzysztof J Geras (k.j.geras@nyu.edu).
+
+Other datasets featured in the paper are not available as they belong to third party institutions and were used under a licensing agreement specific to this study that does not permit further sharing.
+
+The data format instructions provided in the aforementioned notebook also allows the user to utilize this implementation with their own custom dataset.
+
+## Contact
+
+For any questions regarding this repository or the paper, please contact Krishnamurthy (Dj) Dvijotham (dvij@cs.washington.edu) and Jim Winkens (jimwinkens@google.com).
