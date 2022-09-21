@@ -16,7 +16,7 @@ on a diagnostic AI model and when to defer to a human clinician.
 
    ```bash
    python3 -m venv codoc_env
-   source codoc/bin/activate
+   source codoc_env/bin/activate
    ```
    (To leave the virtual environment, type `deactivate`.)
 
