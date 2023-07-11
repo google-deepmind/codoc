@@ -30,7 +30,7 @@ from sklearn import metrics as skmetrics
 _DATA_PATHS = {
     "uk_mammo_arbitration": "data/uk_mammo/arbitration",
     "uk_mammo_single": "data/uk_mammo/single_reader",
-    "us_mammo_2": "data/us_mammo_2",
+    "us_mammo": "data/us_mammo",
 }
 
 
