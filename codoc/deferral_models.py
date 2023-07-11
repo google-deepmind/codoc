@@ -96,7 +96,7 @@ def lam_outputs(
       ),
       "phis": phi,
   }
-  results = {key: value.tolist() for key, value in results}
+  results = {key: value.tolist() for key, value in results.items()}
   return results
 
 

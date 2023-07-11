@@ -28,7 +28,6 @@ from sklearn import metrics as skmetrics
 
 
 _DATA_PATHS = {
-    **{f"tb_{i}": "data/tb" for i in range(1, 6)},
     "uk_mammo_arbitration": "data/uk_mammo/arbitration",
     "uk_mammo_single": "data/uk_mammo/single_reader",
     "us_mammo_2": "data/us_mammo_2",
@@ -220,7 +219,4 @@ def load_data(
   df_tune = pd.read_csv(_build_abs_path(f"{data_folder}/tune.csv"))
   df_val = pd.read_csv(_build_abs_path(f"{data_folder}/val.csv"))
   df_test = pd.read_csv(_build_abs_path(f"{data_folder}/test.csv"))
-  if "tb" in experiment_name:
-    for df in [df_tune, df_val, df_test]:
-      df["y_model"] = df["Manufacturer " + experiment_name[-1]]
   return df_tune, df_val, df_test

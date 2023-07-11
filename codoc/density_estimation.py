@@ -181,7 +181,7 @@ def _phi_single(
   )
 
 
-phi = jax.jit(jax.vmap(_phi_single), in_axes=[None, 0, None])
+phi = jax.jit(jax.vmap(_phi_single, in_axes=[None, 0, None]))
 
 
 def _compute_a_z(

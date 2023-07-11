@@ -354,7 +354,7 @@ def select_model(
         idx_tune_val & idx_a_z & idx_dr
     ]
   # If we still have not found any viable model, conclude unsuccessfully.
-  if not idx:
+  if not np.any(idx):
     print("No models found!")
     results["val_idx"] = np.nan
     results["operating_point"] = np.nan
