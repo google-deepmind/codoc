@@ -31,7 +31,7 @@ Please refer to the original paper for a detailed introduction to the CoDoC fram
 
 ## Datasets
 
-The UK Mammography Dataset (AI scores, clinical predictions, ground truth) is used for generating the results in the paper. If if you're interested in the data, please email codoc-team@google.com and you will be contacted once it is available.
+The UK Mammography Dataset (AI scores, clinical predictions, ground truth) is used for generating the results in the paper. If you're interested in the data, please email codoc-team@google.com and you will be contacted once it is available.
 
 The US Mammography Dataset 2 can be obtained for research purposes by contacting Prof. Krzysztof J Geras (k.j.geras@nyu.edu).
 
