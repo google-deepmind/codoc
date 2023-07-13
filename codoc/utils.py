@@ -211,11 +211,12 @@ def load_data(
   Returns:
     Data sets that include tune, validation, and test splits.
   """
-  if experiment_name in _DATA_PATHS.keys():
-    data_folder = _DATA_PATHS[experiment_name]
-  else:
-    data_folder = experiment_name
-  print(_build_abs_path(f"{data_folder}/tune.csv"))
+  data_folder = (
+      _DATA_PATHS[experiment_name]
+      if experiment_name in _DATA_PATHS.keys()
+      else f"data/{experiment_name}"
+  )
+
   df_tune = pd.read_csv(_build_abs_path(f"{data_folder}/tune.csv"))
   df_val = pd.read_csv(_build_abs_path(f"{data_folder}/val.csv"))
   df_test = pd.read_csv(_build_abs_path(f"{data_folder}/test.csv"))

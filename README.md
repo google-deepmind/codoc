@@ -2,6 +2,11 @@
 
 This repository includes the source code for the paper "Enhancing the reliability and accuracy of AI-enabled diagnosis via complementarity-driven deferral to clinicians (CoDoC)" by Dvijotham et al. (2023), published in the journal _Nature Medicine_. The contents of the repository can be used to replicate the experiments provided in the paper, as well as to utilize the CoDoC framework in independent human-AI complementarity research.
 
+## Data
+
+If you're interested in the data, please email codoc-team@google.com and you will be contacted once it is available.
+
+
 ## Installation
 
 The following command sets up python virtual environment and installs all the
