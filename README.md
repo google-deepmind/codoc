@@ -48,6 +48,22 @@ The data format instructions provided in the aforementioned notebook also allows
 
 For any questions regarding this repository or the paper, please contact Krishnamurthy (Dj) Dvijotham (dvij@cs.washington.edu) and Jim Winkens (jimwinkens@google.com).
 
+## License
+
+Copyright 2023 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
 ## Disclaimer
 
 The content of this research code repository (i) may not be used as a medical device; (ii) may be not used for clinical use of any kind, including but not limited to diagnosis or prognosis; and (iii) may not be used to generate any identifying information about an individual.
