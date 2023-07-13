@@ -2,11 +2,6 @@
 
 This repository includes the source code for the paper "Enhancing the reliability and accuracy of AI-enabled diagnosis via complementarity-driven deferral to clinicians (CoDoC)" by Dvijotham et al. (2023), published in the journal _Nature Medicine_. The contents of the repository can be used to replicate the experiments provided in the paper, as well as to utilize the CoDoC framework in independent human-AI complementarity research.
 
-## Data
-
-If you're interested in the data, please email codoc-team@google.com and you will be contacted once it is available.
-
-
 ## Installation
 
 The following command sets up python virtual environment and installs all the
@@ -36,13 +31,9 @@ Please refer to the original paper for a detailed introduction to the CoDoC fram
 
 ## Datasets
 
-The UK Mammography Dataset (AI scores, clinical predictions, ground truth) will be made available on this page soon, based on a click to accept licensing agreement.
+The UK Mammography Dataset (AI scores, clinical predictions, ground truth) is used for generating the results in the paper. If if you're interested in the data, please email codoc-team@google.com and you will be contacted once it is available.
 
 The US Mammography Dataset 2 can be obtained for research purposes by contacting Prof. Krzysztof J Geras (k.j.geras@nyu.edu).
-
-Other datasets featured in the paper are not available as they belong to third party institutions and were used under a licensing agreement specific to this study that does not permit further sharing.
-
-The data format instructions provided in the aforementioned notebook also allows the user to utilize this implementation with their own custom dataset.
 
 ## Contact
 
