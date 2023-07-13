@@ -47,3 +47,7 @@ The data format instructions provided in the aforementioned notebook also allows
 ## Contact
 
 For any questions regarding this repository or the paper, please contact Krishnamurthy (Dj) Dvijotham (dvij@cs.washington.edu) and Jim Winkens (jimwinkens@google.com).
+
+## Disclaimer
+
+The content of this research code repository (i) may not be used as a medical device; (ii) may be not used for clinical use of any kind, including but not limited to diagnosis or prognosis; and (iii) may not be used to generate any identifying information about an individual.
