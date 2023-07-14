@@ -4,13 +4,19 @@ This repository includes the source code for the paper "Enhancing the reliabilit
 
 ## Installation
 
-The following command sets up python virtual environment and installs all the
-dependencies. This uses `virtualenv` python module
-to create virtual environment. If it doesn not exist, please install it with
-`pip`.
+The following command sets up python virtual environment,
 
    ```bash
-   bash install.sh
+   python3 -m venv codoc_env
+   source codoc_env/bin/activate
+   ```
+This uses `virtualenv` python module
+to create virtual environment. If it doesn not exist, please install it with
+`pip`. Once the environment is set up we can proceed to install all the required
+dependencies.
+
+   ```bash
+   pip install -r requirements.txt
    ```
 
 ## Running
